@@ -38,7 +38,9 @@ function Game() {
       {gameStatus === "won" ? (
         <Banner status={"success"}>
           <strong>Congratulations!</strong> You got it in{" "}
-          <strong>{guesses.length} guesses</strong>
+          <strong>
+            {guesses.length < 2 ? "1 guess" : `${guesses.length} guesses`}
+          </strong>
         </Banner>
       ) : gameStatus === "lost" ? (
         <Banner status={"error"}>
